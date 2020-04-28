@@ -15,6 +15,9 @@ f=Reeder_DNA_ADNP.scleroglossa.constraint.log
 
 #f=Reeder_DNA_AHR.scleroglossa.constraint.log
 
+for f in *log
+do
+
 echo ${f%%.*}	>> $outsummary
 
 seq=`grep -w "sequences with" $f | awk '{print $3}'`
@@ -53,3 +56,5 @@ then
 else
 	echo $gap'\t'	>> $outsummary
 fi
+
+done
