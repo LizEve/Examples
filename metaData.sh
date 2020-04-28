@@ -9,7 +9,7 @@ echo -ne "Pars_Info\t"	>> $outsummary
 echo -ne "Sing_Sites\t"	>> $outsummary
 echo -ne "Cons_Sites\t" >> $outsummary
 echo -ne "Chi2_Fail\t"	>> $outsummary
-echo -ne "Gaps_Ambig\t" >> $outsummary
+echo "Gaps_Ambig" >> $outsummary
 
 #f=Reeder_DNA_ADNP.scleroglossa.constraint.log
 #f=Reeder_DNA_AHR.scleroglossa.constraint.log
@@ -53,7 +53,7 @@ if [ -z "$gap" ]
 then
 	echo -ne "0"'\t'	>> $outsummary
 else
-	echo $gap'\t'	>> $outsummary
+	echo -ne $gap'\t'	>> $outsummary
 fi
 
 done
