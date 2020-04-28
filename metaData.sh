@@ -17,7 +17,7 @@ echo "Gaps_Ambig" >> $outsummary
 for f in *log
 do
 
-echo ${f%%.*}	>> $outsummary
+echo -ne ${f%%.*}'\t'	>> $outsummary
 
 seq=`grep -w "sequences with" $f | awk '{print $3}'`
 
@@ -51,9 +51,9 @@ gap=`grep -w "sequences contain" $f | awk '{print $2}'`
 
 if [ -z "$gap" ] 
 then
-	echo -ne "0"'\t'	>> $outsummary
+	echo "0"	>> $outsummary
 else
-	echo -ne $gap'\t'	>> $outsummary
+	echo $gap	>> $outsummary
 fi
 
 done
