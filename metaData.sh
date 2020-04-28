@@ -1,7 +1,7 @@
 #!/bin/bash
 outsummary=$1
 # Creates header line to specify marginal likelihoods collected
-echo -ne "Locus\t"	>> $outsummary
+echo -ne "Locus\t"	> $outsummary
 echo -ne "Sequences\t"	>> $outsummary
 echo -ne "Columns\t"	>> $outsummary
 echo -ne "Dist_Pat\t"	>> $outsummary
@@ -16,8 +16,6 @@ f=Reeder_DNA_ADNP.scleroglossa.constraint.log
 #f=Reeder_DNA_AHR.scleroglossa.constraint.log
 
 echo ${f%%.*}	>> $outsummary
-
-echo -ne $pat'\t'         >> $outsummary
 
 seq=`grep -w "sequences with" $f | awk '{print $3}'`
 
