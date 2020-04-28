@@ -11,8 +11,7 @@ echo -ne "Cons_Sites\t" >> $outsummary
 echo -ne "Chi2_Fail\t"	>> $outsummary
 echo -ne "Gaps_Ambig\t" >> $outsummary
 
-f=Reeder_DNA_ADNP.scleroglossa.constraint.log
-
+#f=Reeder_DNA_ADNP.scleroglossa.constraint.log
 #f=Reeder_DNA_AHR.scleroglossa.constraint.log
 
 for f in *log
